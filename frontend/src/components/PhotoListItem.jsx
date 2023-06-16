@@ -1,10 +1,15 @@
 
 import React from 'react';
-
+import PhotoFavButton from './PhotoFavButton';
 import '../styles/PhotoListItem.scss';
 
-const PhotoListItem = () => {
-  /* Insert React */
+const PhotoListItem = (props) => {
+  return (
+    <div className='photo-list__item'>
+      <PhotoFavButton favoriteIconClick={props.favoriteIconClick} id={props.id}/>
+      <img src={props.imageSource} className="photo-list__image " onClick={props.modalHandler}/>
+    </div>
+  );
 }
 
 PhotoListItem.defaultProps = {
@@ -18,4 +23,8 @@ PhotoListItem.defaultProps = {
   "profile": `${process.env.PUBLIC_URL}/profile-1.jpg`
 }
 
-export default PhotoListItem
+export default PhotoListItem;
+
+{/* <p>photographer username : {props.username}</p>
+<p>photographer profile : {props.profile}</p>
+<p>location: province: {props.location.montreal}country:{props.location.country}</p> */}

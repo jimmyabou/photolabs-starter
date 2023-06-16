@@ -16,7 +16,7 @@ export function FavIcon({
 
 FavIcon.defaultProps = {
   width: 20,
-  height: 17,
+  height: 20,
   fill: '#EEEEEE',
   outlineWidth: 2,
   stroke: '#C80000',
