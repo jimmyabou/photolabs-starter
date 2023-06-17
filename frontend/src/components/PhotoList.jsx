@@ -8,7 +8,7 @@ const PhotoList = (props) => {
   // console.log(props.photos);
   const array= props.photos.map((item)=>{
     // console.log(item);
-    return <PhotoListItem key={item.id} id={item.id} imageSource={item.urls.regular} favoriteIconClick={props.favoriteIconClick} color={props.color} modalHandler={props.modalHandler}/>;
+    return <PhotoListItem key={item.id} id={item.id} imageSource={item.urls.regular} favoriteIconClick={props.favoriteIconClick} color={props.color} modalHandler={props.modalHandler} displayPhotoHandler={props.displayPhotoHandler}/>;
   });
   return (<ul className="photo-list">
     {array}

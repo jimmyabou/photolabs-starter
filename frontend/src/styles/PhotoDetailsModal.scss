@@ -33,14 +33,15 @@
 
 .photo-details-modal__image {
   margin:8px;
-  max-width: 95%;
+  // max-width: 95%;
   border-radius: 8px;
   object-fit: cover;
+
   // width: 95%;
   // height: 400px;
   // user-select: none;
-  // width:600px;
-  // height: 400px;
+  width:95%;
+  height: 35vw;
   // border-radius: 8px ;
 }
 

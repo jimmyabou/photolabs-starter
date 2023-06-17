@@ -195,10 +195,10 @@ const photos = [
   {
     ...photo2,
     similar_photos: {
-      photo2,
-      photo3,
       photo4,
-      photo5,
+      photo7,
+      photo9,
+      photo10,
     }
   },
   {

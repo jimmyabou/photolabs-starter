@@ -21,10 +21,12 @@ export const PhotoDetailsModal = (props) => (
     </button>
     <div >
     <PhotoFavButton/>
-    <img src={regular} className='photo-details-modal__image'/>
+    <img src={props.photo.urls.full} className='photo-details-modal__image'/>
     </div>
     <PhotoList photos={props.photoList} />
   </div>
 )
 
 export default PhotoDetailsModal;
+
+// photos={props.photoList}

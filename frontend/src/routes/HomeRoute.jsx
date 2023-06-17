@@ -34,7 +34,7 @@ const favoriteIconClick = (id) => {
   <div className="home-route">
     {/* Insert React */}
     <TopNavigation topics={props.topicsList} icon={status}/>
-    <PhotoList photos={props.photoList} favoriteIconClick={favoriteIconClick} modalHandler={props.modalHandler}/>
+    <PhotoList photos={props.photoList} favoriteIconClick={favoriteIconClick} modalHandler={props.modalHandler} displayPhotoHandler={props.displayPhotoHandler}/>
   </div>
 );}
 export default HomeRoute;
