@@ -20,10 +20,10 @@ export const PhotoDetailsModal = (props) => (
       </svg>
     </button>
     <div >
-    <PhotoFavButton/>
+    <PhotoFavButton favoriteIconClick={props.favoriteIconClick} id={props.photo.id}/>
     <img src={props.photo.urls.full} className='photo-details-modal__image'/>
     </div>
-    <PhotoList photos={props.photoList} />
+    <PhotoList photos={props.photoList} favoriteIconClick={props.favoriteIconClick}/>
   </div>
 )
 

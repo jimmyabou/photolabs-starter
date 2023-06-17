@@ -14,38 +14,44 @@ import topics from './mocks/topics.js';
 // Note: Rendering a single component to build components in isolation
 
 const App = () => {
-
+  const [array,setArray]=useState([]);
+  const [status,setStatus]=useState(false);
   const [photoObj, setPhotoObj] = useState(null);
   const [arr, setArr] = useState([]);
-  // let photoObj={};
-  // let arr=[];
-  function displayPhotoOnClick(id){
+
+  useEffect(() => {
+    setStatus(array.length > 0);
+    console.log(array);
+  }, [array]);
+  
+  const favoriteIconClick = (id) => {
+    setArray(prevArray => {
+      const newArray = prevArray.filter(ele => ele !== id);
+      return prevArray.find(ele => ele === id) ? newArray : [id, ...prevArray];
+    });
     
+  };
+  
+  function displayPhotoOnClick(id){ 
     let obj=photos.find(ele=>ele.id===id)
     let sim=(obj.similar_photos);
     let simArray = Object.values(sim);
-    // arr= Object.values(sim);
     setArr(simArray);
-    // console.log( arr);
     setPhotoObj(obj);
-    // console.log( obj);
-    // return obj;
   }
-  
-  // photoObj=displayPhotoOnClick();
   
   const [showModal, setShowModal] = useState(false);
   function modalHandler(){
     setShowModal(!showModal)
-
+    
   }
   
   return (
     <>
 <button onClick={displayPhotoOnClick}>click me</button>
- {showModal&&photoObj&&<PhotoDetailsModal modalHandler={modalHandler} photoList={arr} photo={photoObj} />}
+ {showModal&&photoObj&&<PhotoDetailsModal modalHandler={modalHandler} photoList={arr} photo={photoObj} favoriteIconClick={favoriteIconClick}/>}
  <div className="App">
-<HomeRoute photoList={photos} topicsList={topics} modalHandler={modalHandler} displayPhotoHandler={displayPhotoOnClick}/>
+<HomeRoute photoList={photos} topicsList={topics} modalHandler={modalHandler} displayPhotoHandler={displayPhotoOnClick} favoriteIconClick={favoriteIconClick} icon={status}/>
  </div>
 </>
 );
@@ -53,3 +59,10 @@ const App = () => {
 export default App
 
 // onClick={displayPhotoOnClick}
+
+// let photoObj={};
+// let arr=[];
+// arr= Object.values(sim);
+// console.log( arr);
+// console.log( obj);
+// return obj;

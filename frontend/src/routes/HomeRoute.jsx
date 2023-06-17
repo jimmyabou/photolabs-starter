@@ -5,8 +5,16 @@ import PhotoList from '../components/PhotoList';
 import TopNavigation from '../components/TopNavigationBar';
 const HomeRoute = (props) => {
 
-  const [array,setArray]=useState([]);
-  const [status,setStatus]=useState(false);
+  //removed the state up
+  
+  return (
+    <div className="home-route">
+    {/* Insert React */}
+    <TopNavigation topics={props.topicsList} icon={props.icon}/>
+    <PhotoList photos={props.photoList} favoriteIconClick={props.favoriteIconClick} modalHandler={props.modalHandler} displayPhotoHandler={props.displayPhotoHandler}/>
+  </div>
+);}
+export default HomeRoute;
 
 //  function favoriteIconClick(id){
 //   const newArray = array.filter(ele => ele !== id);
@@ -15,26 +23,3 @@ const HomeRoute = (props) => {
 //  console.log(array);
 //  console.log(status);
 // };
-
-useEffect(() => {
-  setStatus(array.length > 0);
-  console.log(array);
-}, [array]);
-
-const favoriteIconClick = (id) => {
-  setArray(prevArray => {
-    const newArray = prevArray.filter(ele => ele !== id);
-    return prevArray.find(ele => ele === id) ? newArray : [id, ...prevArray];
-  });
-  
-};
-
-
-  return (
-  <div className="home-route">
-    {/* Insert React */}
-    <TopNavigation topics={props.topicsList} icon={status}/>
-    <PhotoList photos={props.photoList} favoriteIconClick={favoriteIconClick} modalHandler={props.modalHandler} displayPhotoHandler={props.displayPhotoHandler}/>
-  </div>
-);}
-export default HomeRoute;
