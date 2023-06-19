@@ -23,7 +23,7 @@ cd backend
 npm start
 ```
 Home Page:
-https://github.com/jimmyabou/photolabs-starter/blob/main/docs/home%20page.png
+![Alt Text](https://github.com/jimmyabou/photolabs-starter/blob/main/docs/home%20page.png)
 
 Modal Form Display:
-https://github.com/jimmyabou/photolabs-starter/blob/main/docs/modalForm.png?raw=true
+![Alt Text](https://github.com/jimmyabou/photolabs-starter/blob/main/docs/modalForm.png?raw=true)
