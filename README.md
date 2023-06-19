@@ -22,3 +22,8 @@ Read `backend/readme` for further setup details.
 cd backend
 npm start
 ```
+Home Page:
+https://github.com/jimmyabou/photolabs-starter/blob/main/docs/home%20page.png
+
+Modal Form Display:
+https://github.com/jimmyabou/photolabs-starter/blob/main/docs/modalForm.png?raw=true
