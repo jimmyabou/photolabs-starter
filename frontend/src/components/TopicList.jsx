@@ -3,40 +3,16 @@ import React from 'react';
 import '../styles/TopicList.scss';
 import TopicListItem from './TopicListItem';
 import { FavIcon } from './FavIcon';
+import { FavBadge } from './FavBadge';
 const TopicList = (props) => {
-
-
-  const Array=props.topics.map((item)=>{
-    return <TopicListItem key={item.id} label={item.title}/>;
+  const Array = props.topics.map((item) => {
+    return <TopicListItem key={item.id} id={item.id} label={item.title} photosByTopicHandler={props.photosByTopicHandler} />;
   })
-
   return (
-  <div className="top-nav-bar__topic-list">
-    {/* Insert React */}
-    
-    {Array}
-    {props.icon&&<span className='topic-list__item'><FavIcon fill={"#C80000"} />
-    </span>}
-  </div>);
+    <div className="top-nav-bar__topic-list">
+      {Array}
+      {!props.icon ? <span ><FavBadge /></span> : <span className='fav-badge__count '><FavBadge />
+      </span>}
+    </div>);
 }
-
-// TopicList.defaultProps = {
-//   topics: [
-//     {
-//       "id": "1",
-//       "slug": "topic-1",
-//       "title": "Nature"
-//     },  
-//     {
-//       "id": "2",
-//       "slug": "topic-2",
-//       "title": "Travel"
-//     },
-//     {
-//       "id": "3",
-//       "slug": "topic-3",
-//       "title": "People"
-//     },
-//   ]
-// }
 export default TopicList

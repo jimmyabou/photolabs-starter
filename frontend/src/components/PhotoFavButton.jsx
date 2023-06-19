@@ -1,28 +1,17 @@
 import React, { useCallback, useState } from 'react';
-
 import { FavIcon } from './FavIcon';
 import '../styles/PhotoFavButton.scss';
+import FavBadge from './FavBadge';
 function PhotoFavButton(props) {
-  const [color,setColor]=useState("");
-  function handlecomponenetClick(){
-    {color===""&&setColor("#C80000")}
-    {color==="#C80000"&&setColor("")};
-    {props.favoriteIconClick(props.id)}
-    // console.log(props.id);  
-}
-  
+  const [color, setColor] = useState(false);
+  function handlecomponenetClick() {
+    setColor(!color)
+    { props.favoriteIconClick(props.id) }
+  }
   return (
     <div className="photo-list__fav-icon " onClick={handlecomponenetClick}>
-      <FavIcon fill={color} width={35} height={35}/>
+      {!color ? <span><FavIcon /></span> : <span className="fav-badge"><FavBadge /></span>}
     </div>
-
   );
 }
-
 export default PhotoFavButton;
-
-// <div className="photo-list__fav-icon-svg">
-        
-       
-// </div>
-// fill= {color}

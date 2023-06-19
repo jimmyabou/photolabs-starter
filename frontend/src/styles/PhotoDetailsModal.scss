@@ -34,24 +34,23 @@
 .photo-details-modal__image {
   margin:8px;
   // max-width: 95%;
-  border-radius: 8px;
+  // border-radius: 8px;
   object-fit: cover;
-
-  // width: 95%;
+  
   // height: 400px;
   // user-select: none;
-  width:95%;
-  height: 35vw;
+  width:80%;
+  height: 30vw;
   // border-radius: 8px ;
 }
 
 .photo-details-modal__top-bar {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   margin: 16px;
   margin-top: 8px;
-  align-items: center;
+  align-items:self-start;
 }
 
 .photo-details-modal__photographer-details {
@@ -66,4 +65,44 @@
   margin-top: 24px;
   margin-bottom: 24px;
   width: 90%;
+}
+
+.photo-details-modal__favIcon{
+  position: relative;
+  top: 8px;
+  right: -8px;
+  cursor: pointer;
+  margin-bottom: -30px;
+  border-width: 0.1px;
+  background-color: #ffffff;
+  width: 32px;
+  height: 32px;
+  text-align: center;
+  border-radius: 100%;
+  justify-content: space-around;
+  align-items: center;
+  display: flex;
+}
+  .trial{
+    display: flex;
+    justify-content: center;
+    width: 95%;
+      margin: 12px;
+      padding: 16px;
+      border-width: 0.5px;
+      border-color: lightgray;
+      border-style: solid;
+      border-radius: 8px;
+      overflow: hidden;
+     flex-direction: column;
+    }
+    .modal-photo-list__profilePic{
+      width: 60px;
+      height:60px;
+      text-align: center;
+      border-radius: 100%;
+    }
+.ele{
+  margin: 10px;
+  
 }
