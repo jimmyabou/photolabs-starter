@@ -27,3 +27,12 @@ Home Page:
 
 Modal Form Display:
 ![Alt Text](https://github.com/jimmyabou/photolabs-starter/blob/main/docs/modalForm.png?raw=true)
+
+Favorite Photo Notification:
+![Alt Text](https://github.com/jimmyabou/photolabs-starter/blob/main/docs/favorite%20several%20photos.png?raw=true)
+Array Updates according to favorited Photos on add and remove:
+![Alt Text](https://github.com/jimmyabou/photolabs-starter/blob/main/docs/arrayUpdateRemoveFavorite.png?raw=true)
+user favorites photos in Modal:
+![Alt Text](https://github.com/jimmyabou/photolabs-starter/blob/main/docs/modalFormFavoritePhoto.png?raw=true)
+photos displayed in terminal corresponding to topic clicked in navigation menu
+![Alt Text](https://github.com/jimmyabou/photolabs-starter/blob/main/docs/photosbytopicDisplayTerminal.png?raw=true)
