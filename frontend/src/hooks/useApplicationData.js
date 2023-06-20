@@ -48,6 +48,7 @@ const useApplicationData = () => {
         .then((res) => res.json())
         .then((data) => {
           console.log(state.topicId, data);
+          setPhotos(data);
         }).catch(error => {
           console.error(error);
         });
