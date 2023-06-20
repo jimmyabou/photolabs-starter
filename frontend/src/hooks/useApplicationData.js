@@ -5,6 +5,7 @@ const reducer = (state, { type, value }) => {
     array: type === 'SET_ARRAY' ? value : state.array,
     status: type === 'SET_STATUS' ? value : state.status,
     showModal: type === 'SET_SHOW_MODAL' ? value : state.showModal,
+    showFavorites: type === 'SET_SHOW_FAVORITES' ? value : state.showFavorites,
     photoObj: type === 'SET_PHOTO_OBJ' ? value : state.photoObj,
     arr: type === 'SET_ARR' ? value : state.arr,
     topicId: type === 'SET_TOPIC_ID' ? value : state.topicId
@@ -17,7 +18,8 @@ const useApplicationData = () => {
     showModal: false,
     photoObj: null,
     arr: [],
-    topicId: null
+    topicId: null,
+    showFavorites:false
   };
   const [photos, setPhotos] = useState([]);
   const [topics, setTopics] = useState([]);
@@ -76,7 +78,19 @@ const useApplicationData = () => {
   };
   const modalHandler = () => {
     dispatch({ type: 'SET_SHOW_MODAL', value: !state.showModal });
+    console.log(state.showModal);
   };
+
+// const displayFavorites=()=>{
+// const favArray=photos.filter
+// }
+
+  const favoritesModalHandler = () => {
+    dispatch({ type: 'SET_SHOW_FAVORITES', value: !state.showFavorites });
+    console.log(state.showFavorites);
+  };
+
+
   useEffect(() => {
   }, [state.array]);
   useEffect(() => {
@@ -90,7 +104,8 @@ const useApplicationData = () => {
     photosByTopicHandler,
     favoriteIconClick,
     displayPhotoOnClick,
-    modalHandler
+    modalHandler,
+    favoritesModalHandler
   };
 };
 
