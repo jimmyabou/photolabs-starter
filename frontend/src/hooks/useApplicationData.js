@@ -78,16 +78,13 @@ const useApplicationData = () => {
   };
   const modalHandler = () => {
     dispatch({ type: 'SET_SHOW_MODAL', value: !state.showModal });
-    console.log(state.showModal);
+    // console.log(state.showModal);
   };
 
-// const displayFavorites=()=>{
-// const favArray=photos.filter
-// }
 
   const favoritesModalHandler = () => {
     dispatch({ type: 'SET_SHOW_FAVORITES', value: !state.showFavorites });
-    console.log(state.showFavorites);
+    // console.log(state.showFavorites);
   };
 
 
