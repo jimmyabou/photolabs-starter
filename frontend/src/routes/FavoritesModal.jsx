@@ -20,6 +20,7 @@ export const FavoritesModal = (props) => (
         </defs>
       </svg>
     </button>
+    <h1 style={{ textAlign: 'center' }}>Favorites</h1>
 <PhotoList photos={props.favArray}  /> 
   </div>
 )
