@@ -37,4 +37,5 @@ user favorites photos in Modal:
 photos displayed in terminal corresponding to topic clicked in navigation menu
 ![Alt Text](https://github.com/jimmyabou/photolabs-starter/blob/main/docs/photosbytopicDisplayTerminal.png?raw=true)
 
-
+Show Favorites
+![Alt Text](https://github.com/jimmyabou/photolabs-starter/blob/main/docs/FavoritesModal.png?raw=true)
