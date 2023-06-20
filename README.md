@@ -34,7 +34,8 @@ Array Updates according to favorited Photos on add and remove:
 ![Alt Text](https://github.com/jimmyabou/photolabs-starter/blob/main/docs/arrayUpdateRemoveFavorite.png?raw=true)
 user favorites photos in Modal:
 ![Alt Text](https://github.com/jimmyabou/photolabs-starter/blob/main/docs/modalFormFavoritePhoto.png?raw=true)
-photos displayed in terminal corresponding to topic clicked in navigation menu
+photos displayed according to topic clicked in navigation menu 
+
 ![Alt Text](https://github.com/jimmyabou/photolabs-starter/blob/main/docs/photosbytopicDisplayTerminal.png?raw=true)
 
 Show Favorites
