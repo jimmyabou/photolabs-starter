@@ -36,7 +36,7 @@ user favorites photos in Modal:
 ![Alt Text](https://github.com/jimmyabou/photolabs-starter/blob/main/docs/modalFormFavoritePhoto.png?raw=true)
 photos displayed according to topic clicked in navigation menu 
 
-![Alt Text](https://github.com/jimmyabou/photolabs-starter/blob/main/docs/photosbytopicDisplayTerminal.png?raw=true)
+![Alt Text]([https://github.com/jimmyabou/photolabs-starter/blob/main/docs/photosbytopicDisplayTerminal.png?raw=true](https://github.com/jimmyabou/photolabs-starter/blob/main/docs/topic%20display.png?raw=true))
 
 Show Favorites
 ![Alt Text](https://github.com/jimmyabou/photolabs-starter/blob/main/docs/FavoritesModal.png?raw=true)
