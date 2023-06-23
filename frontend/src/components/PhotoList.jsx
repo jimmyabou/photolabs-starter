@@ -10,7 +10,7 @@ const PhotoList = (props) => {
       color={props.color}
       modalHandler={props.modalHandler}
       displayPhotoHandler={props.displayPhotoHandler}
-      item={item} />;
+      item={item} favoriteArray={props.favoriteArray}/>;
   });
   return (<ul className="photo-list">
     {array}

@@ -21,9 +21,8 @@ export const FavoritesModal = (props) => (
       </svg>
     </button>
     <h1 style={{ textAlign: 'center' }}>Favorites</h1>
-<PhotoList photos={props.favArray}  /> 
+<PhotoList photos={props.favArray} favoriteArray={props.favoriteArray}/> 
   </div>
 )
 
 export default FavoritesModal;
-// favoriteIconClick={props.favoriteIconClick}

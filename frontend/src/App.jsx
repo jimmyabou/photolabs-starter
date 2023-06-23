@@ -24,10 +24,10 @@ const App = () => {
   } = useApplicationData();
   return (
     <>
-    {showFavorites&&<FavoritesModal favoritesModalHandler={favoritesModalHandler} favArray={array}/>}
-      {showModal && photoObj && <PhotoDetailsModal modalHandler={modalHandler} photoList={arr} photo={photoObj} favoriteIconClick={favoriteIconClick} />}
+    {showFavorites&&<FavoritesModal favoritesModalHandler={favoritesModalHandler} favArray={array} favoriteArray={array}/>}
+      {showModal && photoObj && <PhotoDetailsModal modalHandler={modalHandler} photoList={arr} photo={photoObj} favoriteIconClick={favoriteIconClick} favoriteArray={array}/>}
       <div className="App">
-        <HomeRoute photoList={photos} topicsList={topics} modalHandler={modalHandler} displayPhotoHandler={displayPhotoOnClick} favoriteIconClick={favoriteIconClick} icon={status} photosByTopicHandler={photosByTopicHandler} favoritesModalHandler={favoritesModalHandler} />
+        <HomeRoute photoList={photos} topicsList={topics} modalHandler={modalHandler} displayPhotoHandler={displayPhotoOnClick} favoriteIconClick={favoriteIconClick} icon={status} photosByTopicHandler={photosByTopicHandler} favoritesModalHandler={favoritesModalHandler} favoriteArray={array}/>
       </div>
     </>
   );

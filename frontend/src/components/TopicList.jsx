@@ -1,6 +1,7 @@
 import React from 'react';
 
 import '../styles/TopicList.scss';
+import '../styles/TopicListItem.scss';
 import TopicListItem from './TopicListItem';
 import { FavIcon } from './FavIcon';
 import { FavBadge } from './FavBadge';
@@ -10,14 +11,13 @@ const TopicList = (props) => {
   })
 
   const openFavoriteModal=()=>{
-    console.log("clicked me");
     props.favoritesModalHandler();
   }
 
   return (
     <div className="top-nav-bar__topic-list">
-      {Array}
-      {!props.icon ? <span ><FavBadge /></span> : <span className='fav-badge__count ' onClick={openFavoriteModal}><FavBadge />
+      {Array}<div onClick={openFavoriteModal} className="topic-list__item"><span>Favorites</span></div>
+      {!props.icon ? <span ><FavBadge /></span> : <span className='fav-badge__count ' ><FavBadge />
       </span>}
     </div>);
 }

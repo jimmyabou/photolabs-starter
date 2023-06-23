@@ -6,11 +6,10 @@ const PhotoListItem = (props) => {
   function displayPhoto() {
     props.displayPhotoHandler(props.id);
     props.modalHandler();
-    console.log(props.id);
   }
   return (
     <div className='photo-list__item'>
-      <PhotoFavButton favoriteIconClick={props.favoriteIconClick} id={props.id} item={props.item}/>
+      <PhotoFavButton favoriteIconClick={props.favoriteIconClick} id={props.id} item={props.item} favoriteArray={props.favoriteArray}/>
       <img src={props.imageSource} className="photo-list__image " onClick={displayPhoto} />
       <div className='photo-list__user-profile'>
         <div className='photo-list__user-details'>

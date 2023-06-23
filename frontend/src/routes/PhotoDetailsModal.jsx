@@ -3,7 +3,6 @@ import '../styles/PhotoListItem.scss';
 import '../styles/PhotoDetailsModal.scss'
 import PhotoList from '../components/PhotoList';
 import PhotoFavButton from '../components/PhotoFavButton';
-const regular = `${process.env.PUBLIC_URL}/Image-1-Regular.jpeg`;
 export const PhotoDetailsModal = (props) => (
   <div className='photo-details-modal'>
     <button className='photo-details-modal__close-button' onClick={props.modalHandler}>
@@ -20,7 +19,7 @@ export const PhotoDetailsModal = (props) => (
       </svg>
     </button>
     <div className="photo-details-modal__top-bar">
-      <PhotoFavButton favoriteIconClick={props.favoriteIconClick} item={props.photo} className="" />
+      <PhotoFavButton favoriteIconClick={props.favoriteIconClick} item={props.photo} favoriteArray={props.favoriteArray}/>
       <img src={props.photo.urls.full} className='photo-details-modal__image' />
       <div className='photo-list__user-profile'>
       </div>
@@ -32,7 +31,7 @@ export const PhotoDetailsModal = (props) => (
         </div>
       </div>
     </div>
-    <PhotoList photos={props.photoList} favoriteIconClick={props.favoriteIconClick} />
+    <PhotoList photos={props.photoList} favoriteIconClick={props.favoriteIconClick} favoriteArray={props.favoriteArray} />
   </div>
 )
 
